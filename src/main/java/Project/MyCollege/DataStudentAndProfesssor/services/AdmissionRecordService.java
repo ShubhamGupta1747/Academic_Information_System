@@ -54,9 +54,10 @@ public class AdmissionRecordService{
     public void deleteAllByIds(List<Long> id) {
         admissionRecordRepository.deleteAllByIdInBatch(id);
     }
-//    public AdmissionRecordEntity saveEmployee(AdmissionRecordEntity admissionRecord) {
-//        return admissionRecordRepository.save(admissionRecord);
-//    }
+    
+    public AdmissionRecordEntity saveEmployee(AdmissionRecordEntity admissionRecord) {
+        return admissionRecordRepository.save(admissionRecord);
+    }
 
     public void updateEndTime1(Long id, LocalDateTime updateDate) {
         Optional<AdmissionRecordEntity> ans=admissionRecordRepository.findById(id);
@@ -75,7 +76,7 @@ public class AdmissionRecordService{
 //
 //    public List<AdmissionRecordEntity> getAllAdmissionRecordsFromExternalService() {
 //        String url = baseUrl + "Admission";
-//        return restTemplate.getForObject(url, List.class); // Adjust return type as needed
+//        return restTemplate.getForObject(url, List.class);
 //    }
 
 
