@@ -1,4 +1,4 @@
-package com.codingshuttle.tutorial.dataMapping.DataMappingTutorial;
+package Project.MyCollege.DataStudentAndProfesssor;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
