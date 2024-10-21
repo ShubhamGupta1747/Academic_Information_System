@@ -44,16 +44,20 @@ public class AdmissionRecordController {
         return "id "+ id +" is deleted in database.";
     }
 
+    //get Students By Id
     @GetMapping("/getStudentsById")
     public List<AdmissionRecordEntity> getStudentsById(@RequestBody List<Long> ids) {
         return admissionRecordService.getStudentsById(ids);
     }
 
+    //Delete All By ids
     @GetMapping("/deleteAllByIds")
     public String deleteAllByIds(@RequestBody List<Long> id) {
         admissionRecordService.deleteAllByIds(id);
         return "delete in data base all id which you given me in list";
     }
+
+    //UpdataEndTime
     @PostMapping("/updateEndTime")
     public String updateEndTime(@RequestBody AdmissionRecordEntity request) {
         Long id = request.getId();
